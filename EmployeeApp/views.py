@@ -1,6 +1,8 @@
 from rest_framework.generics import CreateAPIView
-from .serializers import EmployeeSerializer
+from .serializers import GeneralSerializer
+from .models import Employee
 
 
 class EmployeeAdd(CreateAPIView):
-    serializer_class=EmployeeSerializer
+    GeneralSerializer.Meta.model=Employee
+    serializer_class=GeneralSerializer

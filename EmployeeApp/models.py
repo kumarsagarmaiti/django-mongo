@@ -1,6 +1,7 @@
 from mongoengine import *
 
 connect(
+    db="new-django",
     host="mongodb+srv://kumarsagar_functionup:CjDCkJbsxcpkMf5N@cluster0.fnt89sj.mongodb.net/albanero-demo",
 )
 
