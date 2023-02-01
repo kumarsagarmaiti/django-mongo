@@ -1,15 +1,15 @@
-from .models import Student
+from .models import Employee
 from rest_framework_mongoengine import serializers
 
 
-class StudentSerializer(serializers.DocumentSerializer):
+class EmployeeSerializer(serializers.DocumentSerializer):
     class Meta:
-        model = Student
+        model = Employee
         fields = "__all__"
 
 
-student_data = {"name": "Rita", "age": 22}
+# student_data = {"name": "Rita", "age": 22}
 
-serialized_data=StudentSerializer(data=student_data)
-if serialized_data.is_valid():
-    serialized_data.save()
+# serialized_data=StudentSerializer(data=student_data)
+# if serialized_data.is_valid():
+#     serialized_data.save()

@@ -5,9 +5,10 @@ connect(
 )
 
 
-class Student(Document):
+class Employee(Document):
     name = StringField(max_length=50)
     age = IntField()
+    company = StringField(max_length=50)
 
 
 # s1 = Student(name="Tara", age=20)
