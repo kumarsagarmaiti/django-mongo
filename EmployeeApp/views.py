@@ -1,15 +1,13 @@
-from rest_framework.decorators import api_view
-from django.http import HttpResponse, JsonResponse
-from .serializers import DepartmentSerializer
-from rest_framework.parsers import JSONParser
+from rest_framework.generics import CreateAPIView
+from .serializers import StudentSerializer
+from .models import Student
+from rest_framework.mixins import CreateModelMixin,ListModelMixin
 
 
-@api_view(["POST"])
-def create_department(request):
-    print(request.data)
-    # department_data = JSONParser().parse(request.data)
-    # department_serializer = DepartmentSerializer(data=department_data)
-    # if department_serializer.is_valid():
-    #     department_serializer.save()
-    #     return JsonResponse(department_serializer.data)
-    # return JsonResponse(department_serializer.errors)
+class StudentView(CreateAPIView, CreateModelMixin,ListModelMixin):
+    serializer_class = StudentSerializer
+    queryset = Student.objects.all()
+
+    def perform_create(self, serializer):
+        super().perform_create(serializer)
+        student=get_object_or_404

@@ -1,17 +1,15 @@
-from mongoengine import (
-    Document,
-    fields,
+from mongoengine import *
+
+connect(
+    host="mongodb+srv://kumarsagar_functionup:CjDCkJbsxcpkMf5N@cluster0.fnt89sj.mongodb.net/albanero-demo",
 )
 
 
-# Create your models here.
-class Department(Document):
-    name = fields.StringField(required=True)
-    company = fields.StringField(required=True)
-    address = fields.StringField(required=True)
+class Student(Document):
+    name = StringField(max_length=50)
+    age = IntField()
 
 
-class Employee(Document):
-    first_name = fields.StringField(required=True)
-    last_name = fields.StringField(required=True)
-    age = fields.IntField(required=True)
+# s1 = Student(name="Tara", age=20)
+# s1.save()
+# print(s1.id)
