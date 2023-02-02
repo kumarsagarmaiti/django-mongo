@@ -1,62 +1,31 @@
-# from rest_framework.generics import (
-#     CreateAPIView,
-#     ListAPIView,
-#     RetrieveUpdateDestroyAPIView,
-# )
-# from .serializers import GeneralSerializer
-# from .models import Employee
-# from django.shortcuts import get_object_or_404
-
-
-# class EmployeeAdd(CreateAPIView):
-#     GeneralSerializer.Meta.model = Employee
-#     serializer_class = GeneralSerializer
-
-
-# class GetEmployee(ListAPIView):
-#     queryset = Employee.objects.all()
-#     GeneralSerializer.Meta.model = Employee
-#     serializer_class = GeneralSerializer
-
-
-# class EmployeeDetail(RetrieveUpdateDestroyAPIView):
-#     # queryset = Employee.objects.all()
-#     # queryset=Employee.objects.get()
-#     GeneralSerializer.Meta.model = Employee
-#     serializer_class = GeneralSerializer
-#     lookup_field = "employee_id"
-
-#     def get_object(self):
-#         employee_id = self.kwargs["employee_id"]
-#         return Employee.objects.get(employee_id=employee_id)
-
-#     # def get_queryset(self):
-#     #     return Employee.objects.get(employee_id=self.kwargs["employee_id"])
-
-#     # def perform_destroy(self, instance):
-#     #     instance.delete()
-
-#     def delete(self):
-#         Employee.objects.delete(employee_id=self.kwargs["employee_id"])
-#         # employee_doc = get_object_or_404(Employee, employee_id=self.kwargs["employee_id"])
-#         # employee_doc.delete()
-#         # return "success"
-
-
-# from rest_framework.views import APIView
 from .serializers import EmployeeSerializer
 from .models import Employee
 from rest_framework.response import Response
 from rest_framework import generics
+import logging
+from rest_framework.exceptions import ValidationError
+from mongoengine import DoesNotExist
+import time
+
+logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 
 
 class EmployeeAdd(generics.CreateAPIView):
-    serializer_class = EmployeeSerializer
+    try:
+        serializer_class = EmployeeSerializer
+        logging.info(f"Document created successfully at {time.ctime()}")
+    except Exception as e:
+        logging.error(f"Error occurred: {e}")
+        Response(f"An error occurred while creating the document")
 
 
 class EmployeeAll(generics.ListAPIView):
-    serializer_class = EmployeeSerializer
-    queryset = Employee.objects.all()
+    try:
+        serializer_class = EmployeeSerializer
+        queryset = Employee.objects.all()
+    except Exception as e:
+        logging.error(f"Error occurred: {e}")
+        Response(f"An error occurred while creating the document")
 
 
 class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
@@ -65,34 +34,62 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
     queryset = Employee.objects.all()
 
     def get_object(self):
-        queryset = self.get_queryset()
-        obj = queryset.get(employee_id=self.kwargs[self.lookup_field])
-        return obj
+        try:
+            queryset = self.get_queryset()
+            obj = queryset.get(employee_id=self.kwargs[self.lookup_field])
+            return obj
+        except Exception as e:
+            logging.error(
+                f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+            )
+            return Response(
+                {"detail": "An error occurred while processing your request."}, status=500
+            )
 
-    def perform_destroy(self, instance):
-        instance.delete()
-    
-    def perform_update(self, serializer):
-        serializer.save()
+    def update(self, request, *args, **kwargs):
+        try:
+            # Can perform validations for the update operation
 
-# class EmployeeDetails(APIView):
-#     def post(self, request):
-#         serializer = EmployeeSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data)
-#         return Response(serializer.errors)
+            # Calling the parent method to update the document
+            response = super().update(request, *args, **kwargs)
+            logging.info(
+                f"Successfully updated document with ID {kwargs[self.lookup_field]}"
+            )
+            return response
+        except ValidationError as e:
+            logging.error(
+                f"Failed to update document with ID {kwargs[self.lookup_field]} due to validation error: {e}"
+            )
+            return Response({"detail": e.detail}, status=e.status_code)
+        except DoesNotExist:
+            return Response({"detail": "Document not found."}, status=404)
+        except Exception as e:
+            logging.error(
+                f"Failed to update document with ID {kwargs[self.lookup_field]} due to an error: {e}"
+            )
+            return Response(
+                {"detail": "An error occurred while processing your request."}, status=500
+            )
 
-#     def get(self):
-#         print('he')
-#         queryset = Employee.objects.all()
-#         serializer = EmployeeSerializer(queryset, many=True)
-#         return Response(serializer.data)
+    def destroy(self, request, *args, **kwargs):
+        try:
+            response = super().destroy(request, *args, **kwargs)
+            logging.info(
+                f"Successfully deleted document with ID {kwargs[self.lookup_field]}"
+            )
+            return Response(response)
+        except DoesNotExist:
+            return Response({"detail": "Document not found."}, status=404)
+        except Exception as e:
+            logging.error(
+                f"Failed to delete document with ID {kwargs[self.lookup_field]} due to an error: {e}"
+            )
+            return Response(
+                {"detail": "An error occurred while processing your request."}, status=500
+            )
 
-# class EmployeeInfo(RetrieveUpdateDestroyAPIView):
-#     serializer_class=EmployeeSerializer
-#     def get_object(self):
-#         print('hell')
+    # def perform_destroy(self, instance):
+    #     instance.delete()
 
-#         employee_id = self.kwargs["employee_id"]
-#         return Employee.objects.get(employee_id=employee_id)
+    # def perform_update(self, serializer):
+    #     serializer.save()
