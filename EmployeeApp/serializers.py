@@ -8,9 +8,9 @@ from rest_framework_mongoengine import serializers
 #         fields = "__all__"
 
 
-class GeneralSerializer(serializers.DocumentSerializer):
+class EmployeeSerializer(serializers.DocumentSerializer):
     class Meta:
-        model = None
+        model = Employee
         fields = "__all__"
 
 

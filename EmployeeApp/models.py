@@ -7,9 +7,9 @@ connect(
 
 
 class Employee(Document):
-    employee_id=SequenceField(required=False)
+    employee_id = SequenceField(required=False)
     name = StringField(max_length=50)
-    age = IntField()
+    age = IntField(required=True)
     company = StringField(max_length=50)
 
 
