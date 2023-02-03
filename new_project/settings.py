@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import mongoengine
+from mongoengine import connect
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,10 +83,8 @@ WSGI_APPLICATION = "new_project.wsgi.application"
 #     }
 # }
 
-mongoengine.connect(
-    db="django-mongo",
-    host="mongodb+srv://kumarsagar_functionup:CjDCkJbsxcpkMf5N@cluster0.fnt89sj.mongodb.net/albanero-demo",
-)
+connect(db="new-django", host="127.0.0.1", port=27017)
+
 
 
 # Password validation

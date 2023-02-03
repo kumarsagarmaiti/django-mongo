@@ -1,18 +1,27 @@
-from mongoengine import *
+from mongoengine import Document, SequenceField, StringField, IntField, EnumField
+from enum import Enum
+from django.core.exceptions import ValidationError
 
-connect(
-    db="new-django",
-    host="mongodb+srv://kumarsagar_functionup:CjDCkJbsxcpkMf5N@cluster0.fnt89sj.mongodb.net/albanero-demo",
-)
+
+class GenderEnums(str, Enum):
+    MALE = "Male"
+    FEMALE = "Female"
+    OTHER = "Other"
+
+    @classmethod
+    def choices(cls):
+        return [item.value for item in cls]
 
 
 class Employee(Document):
-    employee_id = SequenceField(required=False)
-    name = StringField(max_length=50)
-    age = IntField(required=True)
-    company = StringField(max_length=50)
+    employee_id = SequenceField(required=False, primary_key=True)
+    name = StringField(required=True, max_length=50)
+    age = IntField(required=True, min_value=18, max_value=50)
+    company = StringField(required=True, max_length=50)
+    gender = StringField(choices=GenderEnums.choices(), default=GenderEnums.OTHER)
 
-
-# s1 = Student(name="Tara", age=20)
-# s1.save()
-# print(s1.id)
+    def clean(self):
+        if self.gender == GenderEnums.MALE.value and self.age > 30:
+            raise ValidationError("For male employees, age should be under 31")
+        elif self.gender == GenderEnums.FEMALE.value and self.age < 20:
+            raise ValidationError("For female employees, age should be above 20")

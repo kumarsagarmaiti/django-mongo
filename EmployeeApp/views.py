@@ -1,11 +1,13 @@
 from .serializers import EmployeeSerializer
 from .models import Employee
 from rest_framework.response import Response
-from rest_framework import generics
+from rest_framework import filters
+from rest_framework_mongoengine import generics
 import logging
 from rest_framework.exceptions import ValidationError
 from mongoengine import DoesNotExist
 import time
+from mongoengine.queryset.visitor import Q
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 
@@ -19,10 +21,33 @@ class EmployeeAdd(generics.CreateAPIView):
         Response(f"An error occurred while creating the document")
 
 
-class EmployeeAll(generics.ListAPIView):
+class EmployeeAll(generics.ListCreateAPIView):
+    serializer_class = EmployeeSerializer
+    queryset = Employee.objects.all()
+    my_filter_fields = ("employee_id", "name", "company", "age")
     try:
-        serializer_class = EmployeeSerializer
-        queryset = Employee.objects.all()
+        def get_queryset(self):
+            queryset = super().get_queryset()
+            query_param = self.request.query_params.get("param")
+            if query_param:
+                queryset = queryset.filter(**query_param)
+            return queryset
+
+        # def get_kwargs_for_filtering(self):
+        #     filtering_kwargs = {}
+        #     for field in self.my_filter_fields:
+        #         field_value = self.request.query_params.get(field)
+        #         if field_value:
+        #             field = self.get_serializer().fields[field]
+        #             filtering_kwargs[field] = field.to_representation(field_value)
+        #         return filtering_kwargs
+
+        # def get_queryset(self):
+        #     filtering_kwargs = self.get_kwargs_for_filtering()
+        #     if filtering_kwargs:
+        #         queryset = Employee.objects.filter(**filtering_kwargs)
+        #     return queryset
+
     except Exception as e:
         logging.error(f"Error occurred: {e}")
         Response(f"An error occurred while creating the document")
