@@ -1,60 +1,47 @@
-from .serializers import EmployeeSerializer
+from .serializers import GeneralSerializer
 from .models import Employee
 from rest_framework.response import Response
-from rest_framework import filters
 from rest_framework_mongoengine import generics
 import logging
 from rest_framework.exceptions import ValidationError
 from mongoengine import DoesNotExist
 import time
-from mongoengine.queryset.visitor import Q
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
+
+GeneralSerializer.Meta.model = Employee
+serializer_used = GeneralSerializer
 
 
 class EmployeeAdd(generics.CreateAPIView):
     try:
-        serializer_class = EmployeeSerializer
+        serializer_class = serializer_used
         logging.info(f"Document created successfully at {time.ctime()}")
+
+    except ValidationError as e:
+        Response(f"Validation error: {e}")
     except Exception as e:
         logging.error(f"Error occurred: {e}")
         Response(f"An error occurred while creating the document")
 
 
-class EmployeeAll(generics.ListCreateAPIView):
-    serializer_class = EmployeeSerializer
+class EmployeeAll(generics.ListAPIView):
+    GeneralSerializer.Meta.model = Employee
+    serializer_class = GeneralSerializer
     queryset = Employee.objects.all()
-    my_filter_fields = ("employee_id", "name", "company", "age")
-    try:
-        def get_queryset(self):
-            queryset = super().get_queryset()
-            query_param = self.request.query_params.get("param")
-            if query_param:
-                queryset = queryset.filter(**query_param)
-            return queryset
 
-        # def get_kwargs_for_filtering(self):
-        #     filtering_kwargs = {}
-        #     for field in self.my_filter_fields:
-        #         field_value = self.request.query_params.get(field)
-        #         if field_value:
-        #             field = self.get_serializer().fields[field]
-        #             filtering_kwargs[field] = field.to_representation(field_value)
-        #         return filtering_kwargs
-
-        # def get_queryset(self):
-        #     filtering_kwargs = self.get_kwargs_for_filtering()
-        #     if filtering_kwargs:
-        #         queryset = Employee.objects.filter(**filtering_kwargs)
-        #     return queryset
-
-    except Exception as e:
-        logging.error(f"Error occurred: {e}")
-        Response(f"An error occurred while creating the document")
+    def get_queryset(self):
+        queryset = self.queryset
+        params = self.request.query_params
+        if "name" in params:
+            queryset = queryset.filter(name=params["name"])
+        if "age" in params:
+            queryset = queryset.filter(age=params["age"])
+        return queryset
 
 
 class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = EmployeeSerializer
+    serializer_class = serializer_used
     lookup_field = "employee_id"
     queryset = Employee.objects.all()
 
@@ -102,7 +89,7 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
             logging.info(
                 f"Successfully deleted document with ID {kwargs[self.lookup_field]}"
             )
-            return Response(response)
+            return Response("success")
         except DoesNotExist:
             return Response({"detail": "Document not found."}, status=404)
         except Exception as e:
@@ -112,9 +99,3 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
             return Response(
                 {"detail": "An error occurred while processing your request."}, status=500
             )
-
-    # def perform_destroy(self, instance):
-    #     instance.delete()
-
-    # def perform_update(self, serializer):
-    #     serializer.save()

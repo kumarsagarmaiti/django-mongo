@@ -1,6 +1,6 @@
 from mongoengine import Document, SequenceField, StringField, IntField, EnumField
 from enum import Enum
-from django.core.exceptions import ValidationError
+from rest_framework.exceptions import ValidationError
 
 
 class GenderEnums(str, Enum):

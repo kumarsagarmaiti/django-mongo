@@ -403,3 +403,449 @@ Traceback (most recent call last):
     raise ValidationError("For male employees, age should be under 31")
 django.core.exceptions.ValidationError: ['For male employees, age should be under 31']
 INFO:root:Document created successfully at Fri Feb  3 14:29:04 2023
+INFO:root:Document created successfully at Fri Feb  3 14:49:09 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 428, in run_validation
+    self.run_validators(value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 461, in run_validators
+    super().run_validators(to_validate)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 557, in run_validators
+    for validator in self.validators:
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 397, in validators
+    self._validators = self.get_validators()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 1521, in get_validators
+    self.get_unique_together_validators() +
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 780, in get_unique_together_validators
+    field_names = set(self.get_field_names(self._declared_fields, self.field_info))
+AttributeError: 'GeneralSerializer' object has no attribute 'field_info'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:49:59 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+ERROR:root:Error occurred: name 'Gen' is not defined
+ERROR:root:Error occurred: name 'Gen' is not defined
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+ERROR:root:Error occurred: type object 'GeneralSerializer' has no attribute 'M'
+ERROR:root:Error occurred: type object 'GeneralSerializer' has no attribute 'M'
+ERROR:root:Error occurred: type object 'GeneralSerializer' has no attribute 'M'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:50:22 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 398, in validate
+    self.clean()
+  File "C:\django-mongo\django-mongo\EmployeeApp\models.py", line 25, in clean
+    raise ValidationError("For male employees, age should be under 31")
+django.core.exceptions.ValidationError: ['For male employees, age should be under 31']
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:51:49 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 398, in validate
+    self.clean()
+  File "C:\django-mongo\django-mongo\EmployeeApp\models.py", line 25, in clean
+    raise ValidationError("For male employees, age should be under 31")
+django.core.exceptions.ValidationError: ['For male employees, age should be under 31']
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:55:15 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:55:46 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:55:50 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:55:58 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:56:20 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 22, in create
+    return super().create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 398, in validate
+    self.clean()
+  File "C:\django-mongo\django-mongo\EmployeeApp\models.py", line 25, in clean
+    raise ValidationError("For male employees, age should be under 31")
+django.core.exceptions.ValidationError: ['For male employees, age should be under 31']
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:56:50 2023
+WARNING:django.request:Bad Request: /register
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+WARNING:django.request:Bad Request: /register
+WARNING:django.request:Bad Request: /register
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:57:45 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:57:52 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 14:57:57 2023
+WARNING:django.request:Bad Request: /register
+INFO:root:Document created successfully at Fri Feb  3 15:03:52 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:04:48 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:04:52 2023
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 63, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 34, in get_queryset
+    print(**filters)
+TypeError: 'employee_id' is an invalid keyword argument for print()
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:05:14 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:05:21 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:05:26 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:05:29 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:05:46 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:05:51 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:05:56 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:06:02 2023
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 63, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 35, in get_queryset
+    return super().get_queryset()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 22, in get_queryset
+    queryset = super(GenericAPIView, self).get_queryset()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 66, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'EmployeeAll' should either include a `queryset` attribute, or override the `get_queryset()` method.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:06:27 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:06:31 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:06:35 2023
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 63, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 35, in get_queryset
+    print(filtered_docs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\queryset.py", line 73, in __repr__
+    self._populate_cache()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\queryset.py", line 129, in _populate_cache
+    self._result_cache.append(next(self))
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1596, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1669, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1718, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 91, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 184, in accept
+    return visitor.visit_query(self)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 80, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\transform.py", line 124, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\fields.py", line 2231, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:06:55 2023
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 63, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 22, in get_queryset
+    queryset = super(GenericAPIView, self).get_queryset()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 66, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'EmployeeAll' should either include a `queryset` attribute, or override the `get_queryset()` method.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:07:17 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:07:27 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:07:34 2023
+INFO:root:Document created successfully at Fri Feb  3 15:21:03 2023
+INFO:root:Document created successfully at Fri Feb  3 15:21:03 2023
+INFO:root:Document created successfully at Fri Feb  3 15:21:03 2023
+INFO:root:Document created successfully at Fri Feb  3 15:33:54 2023
+ERROR:root:Failed to retrieve document with the ID 1
+ERROR:root:Failed to delete document with ID 1 due to an error: 'Response' object has no attribute 'delete'
+ERROR:django.request:Internal Server Error: /employee/1
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:35:47 2023
+ERROR:root:Failed to retrieve document with the ID 1
+ERROR:root:Failed to delete document with ID 1 due to an error: 'Response' object has no attribute 'delete'
+ERROR:django.request:Internal Server Error: /employee/1
+WARNING:django.request:Method Not Allowed: /employees
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:36:33 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:37:00 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:37:05 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:37:09 2023
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 63, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 35, in get_queryset
+    filtered_docs=Employee.objects.filter(dict(params))
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 229, in filter
+    return self.__call__(*q_objs, **query)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 121, in __call__
+    raise InvalidQueryError(msg)
+mongoengine.errors.InvalidQueryError: Not a query object: {'employee_id': ['1']}. Did you intend to use key=value?
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:40:25 2023
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 63, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 35, in get_queryset
+    filtered_docs=Employee.objects.all(dict(params))
+TypeError: all() takes 1 positional argument but 2 were given
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:40:59 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:41:15 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:41:19 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 15:41:27 2023
+INFO:root:Document created successfully at Fri Feb  3 15:46:56 2023
+INFO:root:Document created successfully at Fri Feb  3 15:53:32 2023
+INFO:root:Document created successfully at Fri Feb  3 15:57:39 2023
+INFO:root:Document created successfully at Fri Feb  3 15:57:39 2023
+INFO:root:Document created successfully at Fri Feb  3 15:57:39 2023
+INFO:root:Document created successfully at Fri Feb  3 15:58:00 2023
+INFO:root:Document created successfully at Fri Feb  3 15:58:00 2023
+INFO:root:Document created successfully at Fri Feb  3 15:58:00 2023
+INFO:root:Document created successfully at Fri Feb  3 16:17:14 2023
+INFO:root:Document created successfully at Fri Feb  3 16:17:14 2023
+INFO:root:Document created successfully at Fri Feb  3 16:17:14 2023
