@@ -1,4 +1,4 @@
-from .serializers import EmployeeSerializer
+from .serializers import GeneralSerializer
 from .models import Employee
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
@@ -9,10 +9,13 @@ import time
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 
+GeneralSerializer.Meta.model = Employee
+serializer_used = GeneralSerializer
+
 
 class EmployeeAdd(generics.CreateAPIView):
     try:
-        serializer_class = EmployeeSerializer
+        serializer_class = serializer_used
         logging.info(f"Document created successfully at {time.ctime()}")
 
     except ValidationError as e:
@@ -23,8 +26,7 @@ class EmployeeAdd(generics.CreateAPIView):
 
 
 class EmployeeAll(generics.ListAPIView):
-    EmployeeSerializer.Meta.model = Employee
-    serializer_class = EmployeeSerializer
+    serializer_class = serializer_used
     queryset = Employee.objects.all()
 
     def get_queryset(self):
@@ -38,14 +40,14 @@ class EmployeeAll(generics.ListAPIView):
 
 
 class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = EmployeeSerializer(Employee, many=True)
-    lookup_field = "employee_id"
+    serializer_class = serializer_used
+    lookup_field = "pk"
     queryset = Employee.objects.all()
 
     def get_object(self):
         try:
             queryset = self.queryset()
-            obj = queryset.get(employee_id=self.kwargs[self.lookup_field])
+            obj = queryset.get(pk=self.kwargs[self.lookup_field])
             return obj
         except Exception as e:
             logging.error(
@@ -57,9 +59,6 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
 
     def update(self, request, *args, **kwargs):
         try:
-            # Can perform validations for the update operation
-
-            # Calling the parent method to update the document
             response = super().update(request, *args, **kwargs)
             logging.info(
                 f"Successfully updated document with ID {kwargs[self.lookup_field]}"
@@ -86,7 +85,9 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
             logging.info(
                 f"Successfully deleted document with ID {kwargs[self.lookup_field]}"
             )
-            return Response("success")
+            return Response(
+                f"Successfully deleted document with ID {kwargs[self.lookup_field]}"
+            )
         except DoesNotExist:
             return Response({"detail": "Document not found."}, status=404)
         except Exception as e:
