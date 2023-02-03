@@ -1,4 +1,4 @@
-from .serializers import GeneralSerializer
+from .serializers import EmployeeSerializer
 from .models import Employee
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
@@ -9,13 +9,10 @@ import time
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 
-GeneralSerializer.Meta.model = Employee
-serializer_used = GeneralSerializer
-
 
 class EmployeeAdd(generics.CreateAPIView):
     try:
-        serializer_class = serializer_used
+        serializer_class = EmployeeSerializer
         logging.info(f"Document created successfully at {time.ctime()}")
 
     except ValidationError as e:
@@ -26,8 +23,8 @@ class EmployeeAdd(generics.CreateAPIView):
 
 
 class EmployeeAll(generics.ListAPIView):
-    GeneralSerializer.Meta.model = Employee
-    serializer_class = GeneralSerializer
+    EmployeeSerializer.Meta.model = Employee
+    serializer_class = EmployeeSerializer
     queryset = Employee.objects.all()
 
     def get_queryset(self):
@@ -41,13 +38,13 @@ class EmployeeAll(generics.ListAPIView):
 
 
 class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = serializer_used
+    serializer_class = EmployeeSerializer(Employee, many=True)
     lookup_field = "employee_id"
     queryset = Employee.objects.all()
 
     def get_object(self):
         try:
-            queryset = self.get_queryset()
+            queryset = self.queryset()
             obj = queryset.get(employee_id=self.kwargs[self.lookup_field])
             return obj
         except Exception as e:
