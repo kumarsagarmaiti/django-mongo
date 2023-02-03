@@ -953,3 +953,728 @@ TypeError: 'ListSerializer' object is not callable
 INFO:root:Document created successfully at Fri Feb  3 17:48:50 2023
 INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
 INFO:root:Document created successfully at Fri Feb  3 17:49:02 2023
+INFO:root:Document created successfully at Fri Feb  3 19:02:47 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 50, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 54, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:03:07 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 50, in get_object
+    obj = queryset.get(employee_id=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 54, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:03:26 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 50, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 54, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:root:Document created successfully at Fri Feb  3 19:04:19 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 50, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 54, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:root:Document created successfully at Fri Feb  3 19:04:42 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 48, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 52, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:05:00 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 48, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 52, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:05:21 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 48, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 52, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:05:30 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:05:36 2023
+INFO:root:Document created successfully at Fri Feb  3 19:05:36 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:06:00 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 64, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 68, in get_object
+    f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
+KeyError: 'pk'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:06:15 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:06:21 2023
+ERROR:django.request:Internal Server Error: /employee/7
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 47, in get_object
+    obj = queryset.get(pk=self.kwargs[self.lookup_field])
+KeyError: 'pk'
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:06:39 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:07:09 2023
+INFO:root:Document created successfully at Fri Feb  3 19:09:21 2023
+INFO:root:Successfully deleted document with ID 8
+ERROR:root:Failed to retrieve document with the ID 8
+ERROR:django.request:Internal Server Error: /employee/8
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Response' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `GeneralSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Response` instance.
+Original exception text was: 'Response' object has no attribute 'name'.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:10:33 2023
+ERROR:django.request:Internal Server Error: /employee/9
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 55, in retrieve
+    serializer = self.get_serializer(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 110, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'ListSerializer' object is not callable
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:10:48 2023
+ERROR:django.request:Internal Server Error: /employee/9
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 55, in retrieve
+    serializer = self.get_serializer(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 110, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'GeneralSerializer' object is not callable
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:11:02 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:11:14 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:11:23 2023
+ERROR:django.request:Internal Server Error: /employee/9
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 55, in retrieve
+    serializer = self.get_serializer(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'EmployeeOne' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:11:42 2023
+ERROR:django.request:Internal Server Error: /employee/9
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 55, in retrieve
+    serializer = self.get_serializer(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'EmployeeOne' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:11:57 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:12:01 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:12:19 2023
+ERROR:root:Failed to retrieve document with the ID 8
+ERROR:django.request:Internal Server Error: /employee/8
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Response' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `GeneralSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Response` instance.
+Original exception text was: 'Response' object has no attribute 'name'.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:12:37 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:12:45 2023
+ERROR:root:Failed to retrieve document with the ID 8
+ERROR:django.request:Internal Server Error: /employee/8
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 55, in retrieve
+    serializer = self.get_serializer(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 110, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'ListSerializer' object is not callable
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:12:57 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Fri Feb  3 19:13:01 2023
+ERROR:root:Failed to retrieve document with the ID 8
+ERROR:django.request:Internal Server Error: /employee/8
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Response' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `GeneralSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Response` instance.
+Original exception text was: 'Response' object has no attribute 'name'.
+INFO:root:Successfully deleted document with ID 10
+INFO:root:Successfully deleted document with ID 11
+ERROR:root:Failed to retrieve document with the ID 1
+ERROR:django.request:Internal Server Error: /employee/1
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Response' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `GeneralSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Response` instance.
+Original exception text was: 'Response' object has no attribute 'name'.
+ERROR:root:Failed to retrieve document with the ID 4
+ERROR:django.request:Internal Server Error: /employee/4
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Response' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `GeneralSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Response` instance.
+Original exception text was: 'Response' object has no attribute 'name'.
+ERROR:root:Failed to retrieve document with the ID 6
+ERROR:django.request:Internal Server Error: /employee/6
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Response' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 124, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `GeneralSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Response` instance.
+Original exception text was: 'Response' object has no attribute 'name'.
