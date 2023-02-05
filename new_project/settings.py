@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "EmployeeApp"
+    "EmployeeApp",
 ]
 
 MIDDLEWARE = [
@@ -50,12 +50,16 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "EmployeeApp.middleware.EmployeeLogger"
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'EmployeeApp.middleware.MongoEngineAuthentication',
-    ]
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "EmployeeApp.middleware.EmployeeAuthentication",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "EmployeeApp.middleware.EmployeeAuthorisation",
+    ],
 }
 
 
@@ -91,7 +95,6 @@ WSGI_APPLICATION = "new_project.wsgi.application"
 # }
 
 connect(db="new-django", host="127.0.0.1", port=27017)
-
 
 
 # Password validation

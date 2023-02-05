@@ -1,14 +1,14 @@
 from rest_framework import exceptions
 from rest_framework.authentication import BaseAuthentication
+from rest_framework.permissions import BasePermission
 from .models import Employee
 
+EXCLUDED_URLS = ["/register",'/employees']
 
-class MongoEngineAuthentication(BaseAuthentication):
+
+class EmployeeAuthentication(BaseAuthentication):
     def authenticate(self, request):
-        if (
-            request.META.get("REQUEST_METHOD") == "POST"
-            and request.META.get("PATH_INFO") == "/register"
-        ):
+        if request.path in EXCLUDED_URLS:
             return (None, None)
 
         email = request.META.get("HTTP_EMAIL")
@@ -23,3 +23,37 @@ class MongoEngineAuthentication(BaseAuthentication):
             raise exceptions.AuthenticationFailed("Incorrect email or password")
 
         return (None, None)
+
+
+class EmployeeAuthorisation(BasePermission):
+    def has_permission(self, request, view):
+        try:
+            email = request.META.get("HTTP_EMAIL")
+            password = request.META.get("HTTP_PASSWORD")
+            if request.path in EXCLUDED_URLS:
+                return (None, None)
+            employee = Employee.objects.get(
+                email=email, password=password, pk=view.kwargs.get("pk")
+            )
+            if employee:
+                return (None, None)
+        except Employee.DoesNotExist:
+            raise exceptions.NotAuthenticated("Authorisation fail")
+
+
+import logging
+
+logging.basicConfig(filename="middleware_logs.txt", filemode="a", level=logging.INFO)
+
+
+class EmployeeLogger:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        logging.info(f"Started request: {request.method} {request.path}")
+        response = self.get_response(request)
+        logging.info(
+            f"Finished request: {request.method} {request.path} with status {response.status_code}"
+        )
+        return response

@@ -3,14 +3,11 @@ from .models import Employee
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
 import logging
-from rest_framework.exceptions import ValidationError
+from rest_framework.exceptions import ValidationError,NotFound
 from mongoengine import DoesNotExist
 import time
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
-
-# GeneralSerializer.Meta.model = Employee
-# serializer_used = GeneralSerializer
 
 
 class EmployeeAdd(generics.CreateAPIView):
@@ -45,10 +42,12 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
     queryset = Employee.objects.all()
 
     def get_object(self):
+        queryset = self.get_queryset()
         try:
-            queryset = self.get_queryset()
             obj = queryset.get(pk=self.kwargs[self.lookup_field])
             return obj
+        except Employee.DoesNotExist:
+            return NotFound(detail="The document doesn't exist")
         except Exception as e:
             logging.error(
                 f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"

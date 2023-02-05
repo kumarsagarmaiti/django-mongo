@@ -1,0 +1,139 @@
+INFO:root:Document created successfully at Sun Feb  5 12:26:33 2023
+INFO:root:Document created successfully at Sun Feb  5 12:26:33 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:root:Document created successfully at Sun Feb  5 12:28:27 2023
+INFO:root:Document created successfully at Sun Feb  5 12:28:27 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:root:Document created successfully at Sun Feb  5 12:28:34 2023
+INFO:root:Document created successfully at Sun Feb  5 12:28:34 2023
+INFO:root:Started request: GET /employee/30
+INFO:root:Finished request: GET /employee/30 with status 403
+WARNING:django.request:Forbidden: /employee/30
+INFO:root:Started request: GET /employee/29
+INFO:root:Finished request: GET /employee/29 with status 200
+INFO:root:Document created successfully at Sun Feb  5 12:46:09 2023
+INFO:root:Document created successfully at Sun Feb  5 12:46:09 2023
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 403
+WARNING:django.request:Forbidden: /employees
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:root:Document created successfully at Sun Feb  5 19:15:56 2023
+INFO:root:Document created successfully at Sun Feb  5 19:15:56 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:root:Document created successfully at Sun Feb  5 19:18:20 2023
+INFO:root:Document created successfully at Sun Feb  5 19:18:21 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:root:Document created successfully at Sun Feb  5 19:18:58 2023
+INFO:root:Document created successfully at Sun Feb  5 19:18:58 2023
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: GET /employee/32
+INFO:root:Finished request: GET /employee/32 with status 403
+WARNING:django.request:Forbidden: /employee/32
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: GET /employee/32
+INFO:root:Finished request: GET /employee/32 with status 200
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: GET /employee/32
+INFO:root:Finished request: GET /employee/32 with status 403
+WARNING:django.request:Forbidden: /employee/32
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: GET /employee/32
+INFO:root:Finished request: GET /employee/32 with status 200
