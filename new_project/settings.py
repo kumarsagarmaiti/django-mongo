@@ -52,6 +52,13 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'EmployeeApp.middleware.MongoEngineAuthentication',
+    ]
+}
+
+
 ROOT_URLCONF = "new_project.urls"
 
 TEMPLATES = [

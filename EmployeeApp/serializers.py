@@ -1,7 +1,6 @@
 from rest_framework_mongoengine import serializers
-
-
-class GeneralSerializer(serializers.DocumentSerializer):
+from .models import Employee
+class EmployeeSerializer(serializers.DocumentSerializer):
     class Meta:
-        model = None
+        model = Employee
         fields = "__all__"

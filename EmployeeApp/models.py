@@ -1,4 +1,4 @@
-from mongoengine import Document, SequenceField, StringField, IntField, EnumField
+from mongoengine import Document, SequenceField, StringField, IntField, EmailField
 from enum import Enum
 from rest_framework.exceptions import ValidationError
 
@@ -19,6 +19,8 @@ class Employee(Document):
     age = IntField(required=True, min_value=18, max_value=50)
     company = StringField(required=True, max_length=50)
     gender = StringField(choices=GenderEnums.choices(), default=GenderEnums.OTHER)
+    email = EmailField(required=True, unique=True)
+    password = StringField(required=True)
 
     def clean(self):
         if self.gender == GenderEnums.MALE.value and self.age > 30:
