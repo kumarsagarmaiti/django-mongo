@@ -48,14 +48,14 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
     def get_object(self):
         try:
             queryset = self.get_queryset()
-            if queryset == None:
-                raise Employee.DoesNotExist
+            if queryset is None:
+                raise DoesNotExist
             # obj = queryset.get(pk=self.kwargs[self.lookup_field])
             # return obj
             return queryset
-        except Employee.DoesNotExist:
+        except DoesNotExist:
             return NotFound(detail="The document doesn't exist")
-        except Exception as e:
+        except Exception:
             logging.error(
                 f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
             )
@@ -87,7 +87,7 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
 
     def destroy(self, request, *args, **kwargs):
         try:
-            response = super().destroy(request, *args, **kwargs)
+            super().destroy(request, *args, **kwargs)
             logging.info(
                 f"Successfully deleted document with ID {kwargs[self.lookup_field]}"
             )

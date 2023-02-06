@@ -2,14 +2,15 @@ from rest_framework import exceptions
 from rest_framework.authentication import BaseAuthentication
 from rest_framework.permissions import BasePermission
 from .models import Employee
+import logging
 
-EXCLUDED_URLS = ["/register",'/employees']
+EXCLUDED_URLS = ["/register", '/employees']
 
 
 class EmployeeAuthentication(BaseAuthentication):
     def authenticate(self, request):
         if request.path in EXCLUDED_URLS:
-            return (None, None)
+            return None, None
 
         email = request.META.get("HTTP_EMAIL")
         password = request.META.get("HTTP_PASSWORD")
@@ -23,7 +24,7 @@ class EmployeeAuthentication(BaseAuthentication):
         except Employee.DoesNotExist:
             raise exceptions.AuthenticationFailed("Incorrect email or password")
 
-        return (None, None)
+        return None, None
 
 
 class EmployeeAuthorisation(BasePermission):
@@ -37,12 +38,10 @@ class EmployeeAuthorisation(BasePermission):
                 email=email, password=password, pk=view.kwargs.get("pk")
             )
             if employee:
-                return (None, None)
+                return None, None
         except Employee.DoesNotExist:
             raise exceptions.NotAuthenticated("Authorisation fail")
 
-
-import logging
 
 logging.basicConfig(filename="middleware_logs.txt", filemode="a", level=logging.INFO)
 
