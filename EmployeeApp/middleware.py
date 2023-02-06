@@ -19,6 +19,7 @@ class EmployeeAuthentication(BaseAuthentication):
             )
         try:
             user = Employee.objects.get(email=email, password=password)
+            print(user)
         except Employee.DoesNotExist:
             raise exceptions.AuthenticationFailed("Incorrect email or password")
 

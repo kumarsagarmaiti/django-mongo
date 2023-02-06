@@ -3,7 +3,7 @@ from .models import Employee
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
 import logging
-from rest_framework.exceptions import ValidationError,NotFound
+from rest_framework.exceptions import ValidationError, NotFound
 from mongoengine import DoesNotExist
 import time
 
@@ -41,11 +41,18 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
     lookup_field = "pk"
     queryset = Employee.objects.all()
 
+    def get_queryset(self):
+        queryset = Employee.objects.get(pk=self.kwargs[self.lookup_field])
+        return queryset
+
     def get_object(self):
-        queryset = self.get_queryset()
         try:
-            obj = queryset.get(pk=self.kwargs[self.lookup_field])
-            return obj
+            queryset = self.get_queryset()
+            if queryset == None:
+                raise Employee.DoesNotExist
+            # obj = queryset.get(pk=self.kwargs[self.lookup_field])
+            # return obj
+            return queryset
         except Employee.DoesNotExist:
             return NotFound(detail="The document doesn't exist")
         except Exception as e:
