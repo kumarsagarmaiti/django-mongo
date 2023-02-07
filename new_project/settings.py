@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "rest_framework_mongoengine",
     "EmployeeApp",
 ]
 
@@ -53,14 +52,14 @@ MIDDLEWARE = [
     "EmployeeApp.middleware.EmployeeLogger"
 ]
 
-# REST_FRAMEWORK = {
-#     "DEFAULT_AUTHENTICATION_CLASSES": [
-#         "EmployeeApp.middleware.EmployeeAuthentication",
-#     ],
-#     "DEFAULT_PERMISSION_CLASSES": [
-#         "EmployeeApp.middleware.EmployeeAuthorisation",
-#     ],
-# }
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "EmployeeApp.middleware.EmployeeAuthentication",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "EmployeeApp.middleware.EmployeeAuthorisation",
+    ],
+}
 
 ROOT_URLCONF = "new_project.urls"
 
