@@ -150,3 +150,6 @@ INFO:root:Document created successfully at Mon Feb  6 10:26:31 2023
 INFO:root:Started request: GET /employee/6
 INFO:root:Finished request: GET /employee/6 with status 403
 WARNING:django.request:Forbidden: /employee/6
+INFO:root:Document created successfully at Tue Feb  7 12:49:03 2023
+INFO:root:Document created successfully at Tue Feb  7 12:49:03 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.

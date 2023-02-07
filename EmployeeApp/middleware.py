@@ -1,15 +1,19 @@
+import logging
+
+from mongoengine import DoesNotExist
 from rest_framework import exceptions
 from rest_framework.authentication import BaseAuthentication
 from rest_framework.permissions import BasePermission
+
 from .models import Employee
 
-EXCLUDED_URLS = ["/register",'/employees']
+EXCLUDED_URLS = ["/register", "/employees"]
 
 
 class EmployeeAuthentication(BaseAuthentication):
     def authenticate(self, request):
         if request.path in EXCLUDED_URLS:
-            return (None, None)
+            return None, None
 
         email = request.META.get("HTTP_EMAIL")
         password = request.META.get("HTTP_PASSWORD")
@@ -20,10 +24,10 @@ class EmployeeAuthentication(BaseAuthentication):
         try:
             user = Employee.objects.get(email=email, password=password)
             print(user)
-        except Employee.DoesNotExist:
+        except DoesNotExist:
             raise exceptions.AuthenticationFailed("Incorrect email or password")
 
-        return (None, None)
+        return None, None
 
 
 class EmployeeAuthorisation(BasePermission):
@@ -32,17 +36,15 @@ class EmployeeAuthorisation(BasePermission):
             email = request.META.get("HTTP_EMAIL")
             password = request.META.get("HTTP_PASSWORD")
             if request.path in EXCLUDED_URLS:
-                return (None, None)
+                return None, None
             employee = Employee.objects.get(
                 email=email, password=password, pk=view.kwargs.get("pk")
             )
             if employee:
-                return (None, None)
-        except Employee.DoesNotExist:
+                return None, None
+        except DoesNotExist:
             raise exceptions.NotAuthenticated("Authorisation fail")
 
-
-import logging
 
 logging.basicConfig(filename="middleware_logs.txt", filemode="a", level=logging.INFO)
 

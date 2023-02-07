@@ -1,11 +1,13 @@
-from .serializers import EmployeeSerializer
-from .models import Employee
+import logging
+import time
+
+from mongoengine import DoesNotExist
+from rest_framework.exceptions import ValidationError, NotFound
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
-import logging
-from rest_framework.exceptions import ValidationError, NotFound
-from mongoengine import DoesNotExist
-import time
+
+from .models import Employee
+from .serializers import EmployeeSerializer
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 
@@ -40,28 +42,13 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EmployeeSerializer
     lookup_field = "pk"
     queryset = Employee.objects.all()
-
-    def get_queryset(self):
-        queryset = Employee.objects.get(pk=self.kwargs[self.lookup_field])
-        return queryset
+    serializer = EmployeeSerializer(queryset, many=True)
 
     def get_object(self):
-        try:
-            queryset = self.get_queryset()
-            if queryset == None:
-                raise Employee.DoesNotExist
-            # obj = queryset.get(pk=self.kwargs[self.lookup_field])
-            # return obj
-            return queryset
-        except Employee.DoesNotExist:
-            return NotFound(detail="The document doesn't exist")
-        except Exception as e:
-            logging.error(
-                f"Failed to retrieve document with the ID {self.kwargs[self.lookup_field]}"
-            )
-            return Response(
-                {"detail": "An error occurred while processing your request."}, status=500
-            )
+        employee = Employee.objects.filter(pk=self.kwargs[self.lookup_field]).first()
+        if employee is None:
+            raise NotFound
+        return employee
 
     def update(self, request, *args, **kwargs):
         try:
@@ -75,6 +62,8 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
                 f"Failed to update document with ID {kwargs[self.lookup_field]} due to validation error: {e}"
             )
             return Response({"detail": e.detail}, status=e.status_code)
+        except NotFound:
+            return Response("Document not found")
         except DoesNotExist:
             return Response({"detail": "Document not found."}, status=404)
         except Exception as e:
@@ -87,13 +76,15 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
 
     def destroy(self, request, *args, **kwargs):
         try:
-            response = super().destroy(request, *args, **kwargs)
+            super().destroy(request, *args, **kwargs)
             logging.info(
                 f"Successfully deleted document with ID {kwargs[self.lookup_field]}"
             )
             return Response(
                 f"Successfully deleted document with ID {kwargs[self.lookup_field]}"
             )
+        except NotFound:
+            return Response("Document not found")
         except DoesNotExist:
             return Response({"detail": "Document not found."}, status=404)
         except Exception as e:
