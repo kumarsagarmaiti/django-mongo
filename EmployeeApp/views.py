@@ -1,11 +1,13 @@
-from .serializers import EmployeeSerializer
-from .models import Employee
+import logging
+import time
+
+from mongoengine import DoesNotExist
+from rest_framework.exceptions import ValidationError, NotFound
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
-import logging
-from rest_framework.exceptions import ValidationError, NotFound
-from mongoengine import DoesNotExist
-import time
+
+from .models import Employee
+from .serializers import EmployeeSerializer
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 

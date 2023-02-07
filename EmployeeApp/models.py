@@ -1,5 +1,6 @@
-from mongoengine import Document, SequenceField, StringField, IntField, EmailField
 from enum import Enum
+
+from mongoengine import Document, SequenceField, StringField, IntField, EmailField
 from rest_framework.exceptions import ValidationError
 
 
