@@ -40,15 +40,12 @@ class EmployeeAll(generics.ListAPIView):
 
 class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EmployeeSerializer
-    lookup_field = "pk"
-    queryset = Employee.objects.all()
-    serializer = EmployeeSerializer(queryset, many=True)
 
     def get_object(self):
-        employee = Employee.objects.filter(pk=self.kwargs[self.lookup_field]).first()
-        if employee is None:
-            raise NotFound
-        return employee
+        try:
+            return Employee.objects.get(pk=self.kwargs['pk'])
+        except Employee.DoesNotExist:
+            raise NotFound(detail="Employee Not Found")
 
     def update(self, request, *args, **kwargs):
         try:

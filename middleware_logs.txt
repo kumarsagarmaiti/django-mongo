@@ -153,3 +153,12 @@ WARNING:django.request:Forbidden: /employee/6
 INFO:root:Document created successfully at Tue Feb  7 12:49:03 2023
 INFO:root:Document created successfully at Tue Feb  7 12:49:03 2023
 INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.
+INFO:root:Document created successfully at Tue Feb  7 16:54:00 2023
+INFO:root:Document created successfully at Tue Feb  7 16:54:00 2023
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Document created successfully at Tue Feb  7 16:54:35 2023
+INFO:root:Document created successfully at Tue Feb  7 16:54:35 2023
+INFO:root:Started request: GET /employee/31
+INFO:root:Finished request: GET /employee/31 with status 403
+WARNING:django.request:Forbidden: /employee/31
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.
