@@ -654,3 +654,14 @@ INFO:root:Finished request: POST /login with status 500
 INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
 INFO:root:Started request: POST /login
 INFO:root:Finished request: POST /login with status 200
+INFO:root:Started request: POST /add-person
+INFO:root:Finished request: POST /add-person with status 201
+INFO:root:Started request: POST /login
+INFO:root:Finished request: POST /login with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employee/35
+INFO:root:Finished request: GET /employee/35 with status 403
+WARNING:django.request:Forbidden: /employee/35
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200

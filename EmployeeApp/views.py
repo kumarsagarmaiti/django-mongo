@@ -7,6 +7,7 @@ from rest_framework.exceptions import ValidationError, NotFound
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
 from rest_framework.permissions import AllowAny
+from django.conf.global_settings import SECRET_KEY
 
 from .models import Employee
 from .serializers import EmployeeSerializer
@@ -109,7 +110,7 @@ class EmployeeLogin(generics.GenericAPIView):
         user = Employee.objects.get(email=email, password=password)
         if user is not None:
             jwt_payload = {"id": user.id, "email": user.email}
-            jwt_token = {"token": jwt.encode(jwt_payload, "SECRET KEY")}
+            jwt_token = {"token": jwt.encode(jwt_payload, SECRET_KEY)}
             return Response(jwt_token)
         else:
             return Response({"error": "Invalid credentials"})
