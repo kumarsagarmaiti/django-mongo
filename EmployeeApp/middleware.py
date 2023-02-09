@@ -7,7 +7,7 @@ from rest_framework.permissions import BasePermission
 
 from .models import Employee
 
-EXCLUDED_URLS = ["/register", "/employees"]
+EXCLUDED_URLS = ["/register", "/employees", "/add-person","/login"]
 
 
 class EmployeeAuthentication(BaseAuthentication):
@@ -33,10 +33,10 @@ class EmployeeAuthentication(BaseAuthentication):
 class EmployeeAuthorisation(BasePermission):
     def has_permission(self, request, view):
         try:
-            email = request.META.get("HTTP_EMAIL")
-            password = request.META.get("HTTP_PASSWORD")
             if request.path in EXCLUDED_URLS:
                 return None, None
+            email = request.META.get("HTTP_EMAIL")
+            password = request.META.get("HTTP_PASSWORD")
             employee = Employee.objects.get(
                 email=email, password=password, pk=view.kwargs.get("pk")
             )

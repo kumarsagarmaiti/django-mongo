@@ -1,21 +1,28 @@
 import logging
 import time
+import jwt
 
 from mongoengine import DoesNotExist
 from rest_framework.exceptions import ValidationError, NotFound
 from rest_framework.response import Response
 from rest_framework_mongoengine import generics
+from rest_framework.permissions import AllowAny
 
 from .models import Employee
 from .serializers import EmployeeSerializer
+
 
 logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 
 
 class EmployeeAdd(generics.CreateAPIView):
+    serializer_class = EmployeeSerializer
     try:
-        serializer_class = EmployeeSerializer
-        logging.info(f"Document created successfully at {time.ctime()}")
+
+        def post(self, request, *args, **kwargs):
+            print(request.data)
+            logging.info(f"Employee created successfully at {time.ctime()}")
+            return super().post(request, *args, **kwargs)
 
     except ValidationError as e:
         Response(f"Validation error: {e}")
@@ -43,7 +50,7 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
 
     def get_object(self):
         try:
-            return Employee.objects.get(pk=self.kwargs['pk'])
+            return Employee.objects.get(pk=self.kwargs["pk"])
         except Employee.DoesNotExist:
             raise NotFound(detail="Employee Not Found")
 
@@ -91,3 +98,18 @@ class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
             return Response(
                 {"detail": "An error occurred while processing your request."}, status=500
             )
+
+
+class EmployeeLogin(generics.GenericAPIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        email = request.data.get("email", "")
+        password = request.data.get("password", "")
+        user = Employee.objects.get(email=email, password=password)
+        if user is not None:
+            jwt_payload = {"id": user.id, "email": user.email}
+            jwt_token = {"token": jwt.encode(jwt_payload, "SECRET KEY")}
+            return Response(jwt_token)
+        else:
+            return Response({"error": "Invalid credentials"})

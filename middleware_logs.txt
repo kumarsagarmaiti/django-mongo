@@ -162,3 +162,495 @@ INFO:root:Started request: GET /employee/31
 INFO:root:Finished request: GET /employee/31 with status 403
 WARNING:django.request:Forbidden: /employee/31
 INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.
+INFO:root:Document created successfully at Wed Feb  8 12:20:50 2023
+INFO:root:Document created successfully at Wed Feb  8 12:20:50 2023
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 201
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 24, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 17, in create
+    serializer = self.get_serializer(data=request.data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\generics.py", line 125, in get_serializer_class
+    % self.__class__.__name__
+AssertionError: 'EmployeeAdd' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 24, in post
+    print(request.body.name)
+AttributeError: 'bytes' object has no attribute 'name'
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 201
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Started request: POST /register
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 25, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 283, in to_internal_value
+    ret = super(DocumentSerializer, self).to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 483, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 751, in run_validation
+    return super().run_validation(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 548, in run_validation
+    self.run_validators(value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 560, in run_validators
+    validator(value, self)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\validators.py", line 42, in __call__
+    if queryset.first():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 293, in first
+    result = queryset[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 204, in __getitem__
+    _auto_dereference=self._auto_dereference,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 836, in _from_son
+    obj = cls(__auto_convert=False, _created=created, **data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 99, in __init__
+    raise FieldDoesNotExist(msg)
+mongoengine.errors.FieldDoesNotExist: The fields "{'name'}" do not exist on the document "Employee"
+INFO:root:Finished request: POST /register with status 500
+INFO:root:Started request: POST /register
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 25, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 283, in to_internal_value
+    ret = super(DocumentSerializer, self).to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 483, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 751, in run_validation
+    return super().run_validation(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 548, in run_validation
+    self.run_validators(value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 560, in run_validators
+    validator(value, self)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\validators.py", line 42, in __call__
+    if queryset.first():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 293, in first
+    result = queryset[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 204, in __getitem__
+    _auto_dereference=self._auto_dereference,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 836, in _from_son
+    obj = cls(__auto_convert=False, _created=created, **data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 99, in __init__
+    raise FieldDoesNotExist(msg)
+mongoengine.errors.FieldDoesNotExist: The fields "{'name'}" do not exist on the document "Employee"
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Started request: POST /register
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 25, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 283, in to_internal_value
+    ret = super(DocumentSerializer, self).to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 483, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 751, in run_validation
+    return super().run_validation(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 548, in run_validation
+    self.run_validators(value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 560, in run_validators
+    validator(value, self)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\validators.py", line 42, in __call__
+    if queryset.first():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 293, in first
+    result = queryset[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 204, in __getitem__
+    _auto_dereference=self._auto_dereference,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 836, in _from_son
+    obj = cls(__auto_convert=False, _created=created, **data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 99, in __init__
+    raise FieldDoesNotExist(msg)
+mongoengine.errors.FieldDoesNotExist: The fields "{'name'}" do not exist on the document "Employee"
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 21, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 283, in to_internal_value
+    ret = super(DocumentSerializer, self).to_internal_value(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 483, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 751, in run_validation
+    return super().run_validation(data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 548, in run_validation
+    self.run_validators(value)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 560, in run_validators
+    validator(value, self)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\validators.py", line 42, in __call__
+    if queryset.first():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 293, in first
+    result = queryset[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 204, in __getitem__
+    _auto_dereference=self._auto_dereference,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 836, in _from_son
+    obj = cls(__auto_convert=False, _created=created, **data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 99, in __init__
+    raise FieldDoesNotExist(msg)
+mongoengine.errors.FieldDoesNotExist: The fields "{'name'}" do not exist on the document "Employee"
+INFO:root:Finished request: POST /register with status 500
+INFO:root:Started request: POST /add-person
+INFO:root:Finished request: POST /add-person with status 404
+WARNING:django.request:Not Found: /add-person
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\urls.py changed, reloading.
+INFO:root:Started request: POST /add-person
+INFO:root:Finished request: POST /add-person with status 403
+WARNING:django.request:Forbidden: /add-person
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:root:Started request: POST /add-person
+INFO:root:Finished request: POST /add-person with status 201
+INFO:root:Started request: POST /add-person
+ERROR:django.request:Internal Server Error: /add-person
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\response.py", line 61, in rendered_content
+    charset = renderer.charset
+AttributeError: 'AnyCaseJSONParser' object has no attribute 'charset'
+INFO:root:Finished request: POST /add-person with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.
+INFO:root:Started request: POST /add-person
+ERROR:django.request:Internal Server Error: /add-person
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\response.py", line 61, in rendered_content
+    charset = renderer.charset
+AttributeError: 'AnyCaseJSONParser' object has no attribute 'charset'
+INFO:root:Finished request: POST /add-person with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.
+INFO:root:Started request: POST /add-person
+INFO:root:Finished request: POST /add-person with status 201
+INFO:root:Started request: POST /add-person
+INFO:root:Finished request: POST /add-person with status 201
+INFO:root:Started request: POST /add-person
+INFO:root:Finished request: POST /add-person with status 201
+INFO:root:Started request: POST /login
+INFO:root:Finished request: POST /login with status 403
+WARNING:django.request:Forbidden: /login
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\middleware.py changed, reloading.
+INFO:root:Started request: POST /login
+INFO:root:Finished request: POST /login with status 200
+INFO:root:Started request: POST /login
+INFO:root:Finished request: POST /login with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /login
+INFO:root:Finished request: POST /login with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /login
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 109, in post
+    user = self.get_object(email=email, password=password)
+TypeError: get_object() got an unexpected keyword argument 'email'
+INFO:root:Finished request: POST /login with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /login
+INFO:root:Finished request: POST /login with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /login
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 111, in post
+    user = self.get(email=email, password=password)
+AttributeError: 'EmployeeLogin' object has no attribute 'get'
+INFO:root:Finished request: POST /login with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /login
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 112, in post
+    user = Employee.objects.get(email=email, password=password)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 269, in get
+    result = next(queryset)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1603, in __next__
+    _auto_dereference=self._auto_dereference,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 836, in _from_son
+    obj = cls(__auto_convert=False, _created=created, **data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 99, in __init__
+    raise FieldDoesNotExist(msg)
+mongoengine.errors.FieldDoesNotExist: The fields "{'name'}" do not exist on the document "Employee"
+INFO:root:Finished request: POST /login with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Started request: POST /login
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 117, in post
+    jwt_token = {"token": jwt.encode(jwt_payload, "SECRET KEY").decode("utf-8")}
+AttributeError: module 'jwt' has no attribute 'encode'
+INFO:root:Finished request: POST /login with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /login
+ERROR:django.request:Internal Server Error: /login
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 117, in post
+    jwt_token = {"token": jwt.encode(jwt_payload, "SECRET KEY").decode("utf-8")}
+AttributeError: 'str' object has no attribute 'decode'
+INFO:root:Finished request: POST /login with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /login
+INFO:root:Finished request: POST /login with status 200
