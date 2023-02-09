@@ -1,14 +1,14 @@
-from flask import Flask, request, abort, Response
-from pymongo import MongoClient
 import json
+
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from dataclass_wizard.errors import MissingFields
+from flask import Flask, request, abort, Response
+from pymongo import MongoClient
 
 from .employee_model import Employee
 
 app = Flask(__name__)
-
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client["employee_db"]
