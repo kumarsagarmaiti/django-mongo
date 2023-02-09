@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, abort
 from pymongo import MongoClient
 import json
 from bson.json_util import dumps
@@ -37,7 +37,7 @@ def employee_by_id(objectid):
     find_by_id = {"_id": ObjectId(request.view_args["objectid"])}
     employee = employee_collection.find_one(find_by_id)
     if employee is None:
-        return "Employee not found"
+        abort(code=404)
     if request.method == "GET":
         return json.loads(dumps(employee))
 
