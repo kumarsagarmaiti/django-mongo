@@ -114,3 +114,4 @@ class EmployeeLogin(generics.GenericAPIView):
             return Response(jwt_token)
         else:
             return Response({"error": "Invalid credentials"})
+
