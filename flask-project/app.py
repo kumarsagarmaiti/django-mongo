@@ -1,8 +1,9 @@
-from flask import Flask, request, abort
+from flask import Flask, request, abort, Response
 from pymongo import MongoClient
 import json
 from bson.json_util import dumps
 from bson.objectid import ObjectId
+from dataclass_wizard.errors import MissingFields
 
 from .employee_model import Employee
 
@@ -21,9 +22,14 @@ def home():
 
 @app.route("/register", methods=["POST"])
 def add_employee():
-    employee = Employee.from_json(request.data)
-    employee_collection.insert_one(employee.__dict__)
-    return "success"
+    try:
+        employee = Employee.from_json(request.data)
+        employee_collection.insert_one(employee.__dict__)
+        return "success"
+    except MissingFields as e:
+        return Response(f"Missing field: {e.missing_fields}", status=400)
+    except Exception as e:
+        return Response(f"An error occured {e}")
 
 
 @app.route("/employees", methods=["GET"])
@@ -34,7 +40,7 @@ def get_all_employees():
 
 @app.route("/employee/<objectid>", methods=["GET", "PUT", "DELETE"])
 def employee_by_id(objectid):
-    find_by_id = {"_id": ObjectId(request.view_args["objectid"])}
+    find_by_id = {"_id": ObjectId(objectid)}
     employee = employee_collection.find_one(find_by_id)
     if employee is None:
         abort(code=404)
