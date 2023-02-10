@@ -2039,3 +2039,1875 @@ INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
 INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 64, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'age'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 64, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `age` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'age'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 64, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 58, in get
+    [{"$group": {"age": "$age", "company": {"$push": "$company"}}}]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 64, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 58, in get
+    [{"$group": {"age": "$age", "company": {"$push": "$company"}}}]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 64, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'age'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 64, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `age` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'age'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'age'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 65, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `age` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'age'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field '$age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field '$age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must specify one accumulator, full error: {'ok': 0.0, 'errmsg': "The field 'age' must specify one accumulator", 'code': 40238, 'codeName': 'Location40238'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 72, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 67, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'employee_id' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'employee_id' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'pk' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'pk' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'employeeId' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'employeeId' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(*pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\manager.py", line 38, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 232, in _get_collection
+    cls.ensure_indexes()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 916, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2055, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 1938, in __create_indexes
+    session=session,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 306, in _command
+    user_fields=user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 175, in _check_command_response
+    raise DuplicateKeyError(errmsg, code, response, max_wire_version)
+pymongo.errors.DuplicateKeyError: Index build failed: fc3da436-0d09-4a4a-99e1-15d8ac688043: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: fc3da436-0d09-4a4a-99e1-15d8ac688043: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'email': 1}, 'keyValue': {'email': None}}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(*pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\manager.py", line 38, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 232, in _get_collection
+    cls.ensure_indexes()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 916, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2055, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 1938, in __create_indexes
+    session=session,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 306, in _command
+    user_fields=user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 175, in _check_command_response
+    raise DuplicateKeyError(errmsg, code, response, max_wire_version)
+pymongo.errors.DuplicateKeyError: Index build failed: 7fb99661-1906-41ab-9297-4db4c710a2d6: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 7fb99661-1906-41ab-9297-4db4c710a2d6: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'email': 1}, 'keyValue': {'email': None}}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(*pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\manager.py", line 38, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 232, in _get_collection
+    cls.ensure_indexes()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 916, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2055, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 1938, in __create_indexes
+    session=session,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 306, in _command
+    user_fields=user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 175, in _check_command_response
+    raise DuplicateKeyError(errmsg, code, response, max_wire_version)
+pymongo.errors.DuplicateKeyError: Index build failed: 7a319b5b-fdaf-45fe-8b80-c0f55a7c92cf: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 7a319b5b-fdaf-45fe-8b80-c0f55a7c92cf: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'email': 1}, 'keyValue': {'email': None}}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 61, in get
+    data = Employee.objects.aggregate(*pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\manager.py", line 38, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 232, in _get_collection
+    cls.ensure_indexes()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 916, in ensure_indexes
+    collection.create_index(fields, background=background, **opts)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2055, in create_index
+    return self.__create_indexes([index], session, **cmd_options)[0]
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 1938, in __create_indexes
+    session=session,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 306, in _command
+    user_fields=user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 175, in _check_command_response
+    raise DuplicateKeyError(errmsg, code, response, max_wire_version)
+pymongo.errors.DuplicateKeyError: Index build failed: 5faa1a77-119c-4945-844c-a6ad3cb44105: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 5faa1a77-119c-4945-844c-a6ad3cb44105: Collection new-django.employee ( 4568febe-b7eb-410e-a944-3c0efbf23982 ) :: caused by :: E11000 duplicate key error collection: new-django.employee index: email_1 dup key: { email: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'email': 1}, 'keyValue': {'email': None}}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\apps.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\apps.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\apps.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\apps.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\apps.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\apps.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": "self.total_count"},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'name'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 94, in get_attribute
+    instance = instance[attr]
+KeyError: 'company'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 65, in get
+    "payload": {"data": employees.data, "totalCount": "self.total_count"},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `company` on serializer `EmployeeSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'company'."
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": "self.total_count"},
+UnboundLocalError: local variable 'employees' referenced before assignment
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": "self.total_count"},
+UnboundLocalError: local variable 'employees' referenced before assignment
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 66, in get
+    "payload": {"data": employees.data, "totalCount": "self.total_count"},
+UnboundLocalError: local variable 'employees' referenced before assignment
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 60, in get
+    data = Employee.objects.aggregate(*pipeline)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\queryset\base.py", line 1334, in aggregate
+    return collection.aggregate(final_pipeline, cursor={}, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2444, in aggregate
+    **kwargs,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\collection.py", line 2347, in _aggregate
+    retryable=not cmd._performs_write,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\mongo_client.py", line 1448, in _retryable_read
+    return func(session, server, sock_info, read_pref)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\aggregation.py", line 153, in get_cursor
+    user_fields=self._user_fields,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\pool.py", line 789, in command
+    write_concern=write_concern,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\network.py", line 170, in command
+    parse_write_concern_error=parse_write_concern_error,
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\pymongo\helpers.py", line 181, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: The field 'age' must be an accumulator object, full error: {'ok': 0.0, 'errmsg': "The field 'age' must be an accumulator object", 'code': 40234, 'codeName': 'Location40234'}
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200

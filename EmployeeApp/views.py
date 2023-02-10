@@ -34,7 +34,7 @@ class EmployeeAdd(generics.CreateAPIView):
 class EmployeeAll(generics.ListAPIView):
     data = Employee.objects.all()
     total_count = len(data)
-    EmployeeSerializer.Meta.fields=("name","company","age")
+    EmployeeSerializer.Meta.fields = ("name", "company", "age")
 
     def get(self, request, *args, **kwargs):
         if len(request.GET) == 0:
@@ -52,11 +52,23 @@ class EmployeeAll(generics.ListAPIView):
             sort_by = request.GET.get("sortBy", 1)
             data = Employee.objects.order_by(sort_by)
             employees = EmployeeSerializer(data, many=True)
-
+        if request.GET.get("groupBy") is not None:
+            group_by = request.GET.get("groupBy", 1)
+            pipeline = [
+                {"$group": {"_id": f"${group_by}", "name": {"$push": "$name"}}},
+            ]
+            data = Employee.objects.aggregate(*pipeline)
+            return Response(
+                {
+                    "message": "Employee information fetched successfully",
+                    "payload": {"data": list(data), "totalCount": self.total_count},
+                    "success": "true",
+                }
+            )
         return Response(
             {
                 "message": "Employee information fetched successfully",
-                "payload": {"data": employees.data, "totalCount": self.total_count},
+                "payload": {"data": employees.data, "totalCount": "self.total_count"},
                 "success": "true",
             }
         )
