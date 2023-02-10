@@ -33,17 +33,36 @@ class EmployeeAdd(generics.CreateAPIView):
 
 
 class EmployeeAll(generics.ListAPIView):
-    serializer_class = EmployeeSerializer
-    queryset = Employee.objects.all()
+    data = Employee.objects.all()
+    total_count = len(data)
 
-    def get_queryset(self):
-        queryset = self.queryset
-        params = self.request.query_params
-        if "name" in params:
-            queryset = queryset.filter(name=params["name"])
-        if "age" in params:
-            queryset = queryset.filter(age=params["age"])
-        return queryset
+    def get(self, request, *args, **kwargs):
+        if len(request.GET) == 0:
+            employees = EmployeeSerializer(self.data, many=True)
+
+        if request.GET is None:
+            print("hello")
+        if request.GET.get("page") is not None:
+            page = int(request.GET.get("page", 1))
+            if request.GET.get("pageSize") is not None:
+                page_size = int(request.GET.get("pageSize", 1))
+            else:
+                page_size = 10
+            offset = (page - 1) * page_size
+            data = Employee.objects.skip(offset).limit(page_size)
+            employees = EmployeeSerializer(data, many=True)
+        if request.GET.get("sortBy") is not None:
+            sort_by = request.GET.get("sortBy", 1)
+            data = Employee.objects.order_by(sort_by)
+            employees = EmployeeSerializer(data, many=True)
+
+        return Response(
+            {
+                "message": "Student information fetched successfully",
+                "payload": {"data": employees.data, "totalCount": self.total_count},
+                "success": "true",
+            }
+        )
 
 
 class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):
@@ -114,4 +133,3 @@ class EmployeeLogin(generics.GenericAPIView):
             return Response(jwt_token)
         else:
             return Response({"error": "Invalid credentials"})
-
