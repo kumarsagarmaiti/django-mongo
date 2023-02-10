@@ -36,7 +36,7 @@ class EmployeeAll(generics.ListAPIView):
     total_count = len(data)
     EmployeeSerializer.Meta.fields = ("name", "company", "age")
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         if len(request.GET) == 0:
             employees = EmployeeSerializer(self.data, many=True)
         if request.GET.get("page") is not None:

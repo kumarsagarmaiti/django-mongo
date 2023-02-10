@@ -3911,3 +3911,5 @@ INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
 INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
