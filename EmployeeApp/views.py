@@ -21,7 +21,6 @@ class EmployeeAdd(generics.CreateAPIView):
     try:
 
         def post(self, request, *args, **kwargs):
-            print(request.data)
             logging.info(f"Employee created successfully at {time.ctime()}")
             return super().post(request, *args, **kwargs)
 
@@ -35,13 +34,11 @@ class EmployeeAdd(generics.CreateAPIView):
 class EmployeeAll(generics.ListAPIView):
     data = Employee.objects.all()
     total_count = len(data)
+    EmployeeSerializer.Meta.fields=("name","company","age")
 
     def get(self, request, *args, **kwargs):
         if len(request.GET) == 0:
             employees = EmployeeSerializer(self.data, many=True)
-
-        if request.GET is None:
-            print("hello")
         if request.GET.get("page") is not None:
             page = int(request.GET.get("page", 1))
             if request.GET.get("pageSize") is not None:
@@ -58,7 +55,7 @@ class EmployeeAll(generics.ListAPIView):
 
         return Response(
             {
-                "message": "Student information fetched successfully",
+                "message": "Employee information fetched successfully",
                 "payload": {"data": employees.data, "totalCount": self.total_count},
                 "success": "true",
             }

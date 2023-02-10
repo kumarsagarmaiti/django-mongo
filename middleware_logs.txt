@@ -1518,3 +1518,524 @@ INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py c
 INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
 INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'str' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 59, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'name'.
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'str' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 59, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'name'.
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 59, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 327, in get_fields
+    field_names = self.get_field_names(declared_fields, self.field_info)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 377, in get_field_names
+    'Got %s.' % type(fields).__name__
+TypeError: The `fields` option must be a list or tuple or "__all__". Got str.
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 59, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 327, in get_fields
+    field_names = self.get_field_names(declared_fields, self.field_info)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 377, in get_field_names
+    'Got %s.' % type(fields).__name__
+TypeError: The `fields` option must be a list or tuple or "__all__". Got str.
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:root:Started request: GET /employees
+ERROR:django.request:Internal Server Error: /employees
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'str' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 59, in get
+    "payload": {"data": employees.data, "totalCount": self.total_count},
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `name` on serializer `EmployeeSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'name'.
+INFO:root:Finished request: GET /employees with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 15:51:58 2023
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 15:52:05 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 439, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (Employee:35) (Field is required: ['age', 'email', 'password'])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 26, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 194, in create
+    raise me_ValidationError(msg)
+mongoengine.errors.ValidationError: Got a `ValidationError` when calling `Employee.objects.create()`. This may be because request data satisfies serializer validations but not Mongoengine`s. You may need to check consistency between Employee and EmployeeSerializer.
+If that is not the case, please open a ticket regarding this issue on https://github.com/umutbozkurt/django-rest-framework-mongoengine/issues
+Original exception was: ValidationError (Employee:35) (Field is required: ['age', 'email', 'password'])
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 15:52:42 2023
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 15:52:47 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 15:58:35 2023
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 15:58:39 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 439, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (Employee:37) (Field is required: ['name', 'company'])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 25, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 194, in create
+    raise me_ValidationError(msg)
+mongoengine.errors.ValidationError: Got a `ValidationError` when calling `Employee.objects.create()`. This may be because request data satisfies serializer validations but not Mongoengine`s. You may need to check consistency between Employee and EmployeeSerializer.
+If that is not the case, please open a ticket regarding this issue on https://github.com/umutbozkurt/django-rest-framework-mongoengine/issues
+Original exception was: ValidationError (Employee:37) (Field is required: ['name', 'company'])
+INFO:root:Finished request: POST /register with status 500
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 16:00:00 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 439, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (Employee:38) (Field is required: ['name', 'company'])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 25, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 194, in create
+    raise me_ValidationError(msg)
+mongoengine.errors.ValidationError: Got a `ValidationError` when calling `Employee.objects.create()`. This may be because request data satisfies serializer validations but not Mongoengine`s. You may need to check consistency between Employee and EmployeeSerializer.
+If that is not the case, please open a ticket regarding this issue on https://github.com/umutbozkurt/django-rest-framework-mongoengine/issues
+Original exception was: ValidationError (Employee:38) (Field is required: ['name', 'company'])
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 16:00:29 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 16:08:30 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 439, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (Employee:40) (Field is required: ['age', 'email', 'password'])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 25, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 194, in create
+    raise me_ValidationError(msg)
+mongoengine.errors.ValidationError: Got a `ValidationError` when calling `Employee.objects.create()`. This may be because request data satisfies serializer validations but not Mongoengine`s. You may need to check consistency between Employee and EmployeeSerializer.
+If that is not the case, please open a ticket regarding this issue on https://github.com/umutbozkurt/django-rest-framework-mongoengine/issues
+Original exception was: ValidationError (Employee:40) (Field is required: ['age', 'email', 'password'])
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\serializers.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Fri Feb 10 16:09:27 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
