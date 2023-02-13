@@ -3,7 +3,7 @@ import json
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from dataclass_wizard.errors import MissingFields
-from flask import Flask, request, abort, Response
+from flask import Flask, request, abort, Response, jsonify
 from pymongo import MongoClient
 
 from .employee_model import Employee
@@ -34,9 +34,27 @@ def add_employee():
 
 @app.route("/employees", methods=["GET"])
 def get_all_employees():
+    query = request.args.to_dict()
+    body = request.get_json()
     try:
-        employees = employee_collection.find({})
-        return json.loads(dumps(employees))
+        if body is not None:
+            body["_id"] = 0
+            employees = employee_collection.find({}, body)
+        if "groupBy" in query:
+            pipeline = [
+                {
+                    "$group": {
+                        "_id": f"${query.get('groupBy')}",
+                        "name": {"$push": "$name"},
+                    }
+                }
+            ]
+            employees = employee_collection.aggregate(pipeline)
+        else:
+            if "age" in query:
+                query["age"] = int(query["age"])
+            employees = employee_collection.find(query, {"_id": 0})
+        return list(employees)
     except Exception as e:
         return Response(f"An error occured {e}")
 
