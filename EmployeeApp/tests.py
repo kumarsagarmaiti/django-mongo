@@ -1,15 +1,13 @@
 import unittest
-from mongoengine import connect,disconnect
+from mongoengine import connect, disconnect, disconnect_all
 from .models import Employee
 from .serializers import EmployeeSerializer
 
 
 class EmployeeAPITestCase(unittest.TestCase):
-
     @classmethod
     def setUpClass(cls):
-        connect("employee_db_django", host="127.0.0.1", port=27017)
-
+        pass
     employee1 = Employee(
         name="John Doe",
         email="johndoe@example.com",
@@ -63,4 +61,3 @@ class EmployeeAPITestCase(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         Employee.drop_collection()
-        disconnect()
