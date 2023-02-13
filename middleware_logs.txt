@@ -3913,3 +3913,9 @@ INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
 INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200

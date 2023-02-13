@@ -32,13 +32,13 @@ class EmployeeAdd(generics.CreateAPIView):
 
 
 class EmployeeAll(generics.ListAPIView):
-    data = Employee.objects.all()
-    total_count = len(data)
+    total_count = Employee.objects.filter(company="albnero").count()
     EmployeeSerializer.Meta.fields = ("name", "company", "age")
 
     def get(self, request):
         if len(request.GET) == 0:
-            employees = EmployeeSerializer(self.data, many=True)
+            data = Employee.objects.all()
+            employees = EmployeeSerializer(data, many=True)
         if request.GET.get("page") is not None:
             page = int(request.GET.get("page", 1))
             if request.GET.get("pageSize") is not None:
@@ -68,7 +68,7 @@ class EmployeeAll(generics.ListAPIView):
         return Response(
             {
                 "message": "Employee information fetched successfully",
-                "payload": {"data": employees.data, "totalCount": "self.total_count"},
+                "payload": {"data": employees.data, "totalCount": self.total_count},
                 "success": "true",
             }
         )
