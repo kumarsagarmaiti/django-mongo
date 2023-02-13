@@ -86,7 +86,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "new_project.wsgi.application"
 
 
-connect(db=env("DATABASE_NAME"), host=env("DATABASE_HOST"), port=int(env("port")))
+connect(db="employee_db_django", host=env("DATABASE_HOST"), port=int(env("port")))
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

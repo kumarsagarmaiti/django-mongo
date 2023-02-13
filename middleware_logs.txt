@@ -3919,3 +3919,7 @@ INFO:root:Finished request: GET /employees with status 200
 INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
 INFO:root:Started request: GET /employees
 INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: POST /employees/
+INFO:root:Finished request: POST /employees/ with status 404
+WARNING:django.request:Not Found: /employees/
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.
