@@ -36,43 +36,46 @@ class EmployeeAll(generics.ListAPIView):
     total_count = Employee.objects.filter(company="albnero").count()
 
     def get(self, request):
-        EmployeeSerializer.Meta.fields = ("name", "company", "age")
-        if len(request.GET) == 0:
-            data = Employee.objects.all()
-            employees = EmployeeSerializer(data, many=True)
-        if request.GET.get("page") is not None:
-            page = int(request.GET.get("page", 1))
-            if request.GET.get("pageSize") is not None:
-                page_size = int(request.GET.get("pageSize", 1))
-            else:
-                page_size = 10
-            offset = (page - 1) * page_size
-            data = Employee.objects.skip(offset).limit(page_size)
-            employees = EmployeeSerializer(data, many=True)
-        if request.GET.get("sortBy") is not None:
-            sort_by = request.GET.get("sortBy", 1)
-            data = Employee.objects.order_by(sort_by)
-            employees = EmployeeSerializer(data, many=True)
-        if request.GET.get("groupBy") is not None:
-            group_by = request.GET.get("groupBy", 1)
-            pipeline = [
-                {"$group": {"_id": f"${group_by}", "name": {"$push": "$name"}}},
-            ]
-            data = Employee.objects.aggregate(*pipeline)
+        try:
+            EmployeeSerializer.Meta.fields = ("name", "company", "age")
+            if len(request.GET) == 0:
+                data = Employee.objects.all()
+                employees = EmployeeSerializer(data, many=True)
+            if request.GET.get("page") is not None:
+                page = int(request.GET.get("page", 1))
+                if request.GET.get("pageSize") is not None:
+                    page_size = int(request.GET.get("pageSize", 1))
+                else:
+                    page_size = 10
+                offset = (page - 1) * page_size
+                data = Employee.objects.skip(offset).limit(page_size)
+                employees = EmployeeSerializer(data, many=True)
+            if request.GET.get("sortBy") is not None:
+                sort_by = request.GET.get("sortBy", 1)
+                data = Employee.objects.order_by(sort_by)
+                employees = EmployeeSerializer(data, many=True)
+            if request.GET.get("groupBy") is not None:
+                group_by = request.GET.get("groupBy", 1)
+                pipeline = [
+                    {"$group": {"_id": f"${group_by}", "name": {"$push": "$name"}}},
+                ]
+                data = Employee.objects.aggregate(*pipeline)
+                return Response(
+                    {
+                        "message": "Employee information fetched successfully",
+                        "payload": {"data": list(data), "totalCount": self.total_count},
+                        "success": "true",
+                    }
+                )
             return Response(
                 {
                     "message": "Employee information fetched successfully",
-                    "payload": {"data": list(data), "totalCount": self.total_count},
+                    "payload": {"data": employees.data, "totalCount": self.total_count},
                     "success": "true",
                 }
             )
-        return Response(
-            {
-                "message": "Employee information fetched successfully",
-                "payload": {"data": employees.data, "totalCount": self.total_count},
-                "success": "true",
-            }
-        )
+        except ValueError as e:
+            return Response(data=f'An error occured: {e}', status=400)
 
 
 class EmployeeOne(generics.RetrieveUpdateDestroyAPIView):

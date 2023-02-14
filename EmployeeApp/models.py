@@ -28,3 +28,8 @@ class Employee(Document):
             raise ValidationError("For male employees, age should be under 31")
         elif self.gender == GenderEnums.FEMALE.value and self.age < 20:
             raise ValidationError("For female employees, age should be above 20")
+
+    meta = {
+        "indexes": ["employee_id"],
+        # "ordering": ["-created_at"],
+    }
