@@ -18,6 +18,7 @@ logging.basicConfig(filename="logs.txt", filemode="a", level=logging.INFO)
 
 class EmployeeAdd(generics.CreateAPIView):
     serializer_class = EmployeeSerializer
+
     try:
 
         def post(self, request, *args, **kwargs):
@@ -33,9 +34,9 @@ class EmployeeAdd(generics.CreateAPIView):
 
 class EmployeeAll(generics.ListAPIView):
     total_count = Employee.objects.filter(company="albnero").count()
-    EmployeeSerializer.Meta.fields = ("name", "company", "age")
 
     def get(self, request):
+        EmployeeSerializer.Meta.fields = ("name", "company", "age")
         if len(request.GET) == 0:
             data = Employee.objects.all()
             employees = EmployeeSerializer(data, many=True)

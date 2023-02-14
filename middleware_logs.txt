@@ -3923,3 +3923,250 @@ INFO:root:Started request: POST /employees/
 INFO:root:Finished request: POST /employees/ with status 404
 WARNING:django.request:Not Found: /employees/
 INFO:django.utils.autoreload:C:\django-mongo\django-mongo\new_project\settings.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:50:41 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 439, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (Employee:57) (Field is required: ['email', 'password'])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 25, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 194, in create
+    raise me_ValidationError(msg)
+mongoengine.errors.ValidationError: Got a `ValidationError` when calling `Employee.objects.create()`. This may be because request data satisfies serializer validations but not Mongoengine`s. You may need to check consistency between Employee and EmployeeSerializer.
+If that is not the case, please open a ticket regarding this issue on https://github.com/umutbozkurt/django-rest-framework-mongoengine/issues
+Original exception was: ValidationError (Employee:57) (Field is required: ['email', 'password'])
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:51:53 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 439, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (Employee:58) (Field is required: ['email', 'password'])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 26, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 194, in create
+    raise me_ValidationError(msg)
+mongoengine.errors.ValidationError: Got a `ValidationError` when calling `Employee.objects.create()`. This may be because request data satisfies serializer validations but not Mongoengine`s. You may need to check consistency between Employee and EmployeeSerializer.
+If that is not the case, please open a ticket regarding this issue on https://github.com/umutbozkurt/django-rest-framework-mongoengine/issues
+Original exception was: ValidationError (Employee:58) (Field is required: ['email', 'password'])
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:52:52 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\models.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:54:21 2023
+ERROR:django.request:Internal Server Error: /register
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 162, in create
+    instance = self.recursive_save(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 262, in recursive_save
+    instance.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\document.py", line 399, in save
+    self.validate(clean=clean)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\mongoengine\base\document.py", line 439, in validate
+    raise ValidationError(message, errors=errors)
+mongoengine.errors.ValidationError: ValidationError (Employee:60) (Field is required: ['email', 'password'])
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\EmployeeApp\views.py", line 35, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\generics.py", line 56, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\django-mongo\django-mongo\venv\lib\site-packages\rest_framework_mongoengine\serializers.py", line 194, in create
+    raise me_ValidationError(msg)
+mongoengine.errors.ValidationError: Got a `ValidationError` when calling `Employee.objects.create()`. This may be because request data satisfies serializer validations but not Mongoengine`s. You may need to check consistency between Employee and EmployeeSerializer.
+If that is not the case, please open a ticket regarding this issue on https://github.com/umutbozkurt/django-rest-framework-mongoengine/issues
+Original exception was: ValidationError (Employee:60) (Field is required: ['email', 'password'])
+INFO:root:Finished request: POST /register with status 500
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:54:38 2023
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:55:09 2023
+INFO:root:Finished request: POST /register with status 400
+WARNING:django.request:Bad Request: /register
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:55:14 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:django.utils.autoreload:C:\django-mongo\django-mongo\EmployeeApp\views.py changed, reloading.
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:55:39 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:55:46 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:55:49 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:55:56 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:56:02 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:56:04 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:56:07 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:56:09 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:56:12 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: POST /register
+INFO:root:Employee created successfully at Tue Feb 14 11:56:20 2023
+INFO:root:Finished request: POST /register with status 201
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
+INFO:root:Started request: GET /employees
+INFO:root:Finished request: GET /employees with status 200
